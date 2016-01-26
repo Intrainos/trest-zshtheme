@@ -35,5 +35,4 @@ function git_infoer() {
 
 PROMPT='
 %{$fg[white]%}%n@%m %{$fg[yellow]%}%~ $(git_infoer)
-$reset_color> $(IDENT) $reset_color'
-
+%{$fg_bold[cyan]%}%* $reset_color> $(IDENT) $reset_color'
