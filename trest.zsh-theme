@@ -15,9 +15,9 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$fg_bold[white]%}]"
 
 function IDENT() {
 	if [[ "$USER" == "root" ]]; then
-		echo "%{$fg[green]%}#"; 
+		echo "%{$fg[green]%}#%{$reset_color%} "; 
 	else
-		echo "%{$fg[green]%}$";
+		echo "%{$fg[green]%}$%{$reset_color%} ";
 	fi
 }
 
@@ -33,6 +33,5 @@ function git_infoer() {
 	fi
 }
 
-PROMPT='
-%{$fg[white]%}%n@%m %{$fg[yellow]%}%~ $(git_infoer)
-%{$fg_bold[cyan]%}%* $reset_color> $(IDENT) $reset_color'
+PROMPT='%{$fg[white]%}%n@%m %{$fg[yellow]%}%~ $(git_infoer)
+%{$fg_bold[cyan]%}%*%{$reset_color%} > $(IDENT)'
