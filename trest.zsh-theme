@@ -33,5 +33,8 @@ function git_infoer() {
 	fi
 }
 
+
+local recent_command_status="%(?:%{$fg[white]%}> :%{$fg_bold[red]%}> )"
+
 PROMPT='%{$fg[white]%}%n@%m %{$fg[yellow]%}%~ $(git_infoer)
-%{$fg_bold[cyan]%}%*%{$reset_color%} > $(IDENT)'
+%{$fg_bold[cyan]%}%*%{$reset_color%} ${recent_command_status}$(IDENT)'
